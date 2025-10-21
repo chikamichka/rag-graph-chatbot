@@ -108,8 +108,7 @@ docker run -d --name neo4j \
 python initialize_stores.py
 
 # 5. Launch chatbot
-pip uninstall gradio gradio-client -y                               
-pip install gradio==3.50.0
+pip install --upgrade gradio==4.44.0    
 python src/ui/chatbot_minimal.py
 ```
 
