@@ -1,0 +1,55 @@
+# RAG + Graph KB Chatbot Requirements - M1 Mac Compatible
+
+# Core LLM & Embeddings
+torch>=2.0.0
+transformers>=4.36.0
+sentence-transformers>=2.2.2
+accelerate>=0.25.0
+bitsandbytes>=0.41.0
+
+# LoRA Fine-tuning
+peft>=0.7.0
+trl>=0.7.0
+datasets>=2.16.0
+
+# Vector Databases
+chromadb>=0.4.22
+faiss-cpu>=1.7.4
+
+# Graph Database
+neo4j>=5.14.0
+py2neo>=2021.2.3
+
+# RAG Framework
+llama-index>=0.10.0
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# API & Streaming
+fastapi>=0.109.0
+uvicorn>=0.27.0
+sse-starlette>=1.8.0  # Server-Sent Events for streaming
+python-multipart>=0.0.6
+
+# Beautiful UI
+gradio>=4.16.0
+streamlit>=1.30.0  # Alternative UI option
+
+# Data Processing
+beautifulsoup4>=4.12.0
+markdown>=3.5.0
+pypdf>=3.17.0
+python-docx>=1.1.0
+
+# Utilities
+pydantic>=2.5.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+loguru>=0.7.0
+tqdm>=4.66.0
+aiofiles>=23.2.1
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.25.0

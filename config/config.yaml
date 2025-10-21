@@ -1,0 +1,65 @@
+# RAG + Graph KB Chatbot Configuration
+
+system:
+  name: "IoT Documentation Chatbot"
+  version: "1.0.0"
+
+# LLM Configuration
+llm:
+  base_model: "Qwen/Qwen2.5-1.5B-Instruct"  # M1 compatible
+  device: "mps"  # mps for M1, cuda for GPU, cpu for CPU
+  max_tokens: 512
+  temperature: 0.7
+  use_lora: false  # Set true after fine-tuning
+
+# LoRA Fine-tuning (when enabled)
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: ["q_proj", "v_proj", "k_proj", "o_proj"]
+
+# Vector Database (ChromaDB)
+vector_db:
+  type: "chromadb"
+  persist_directory: "./data/embeddings"
+  collection_name: "iot_docs"
+  embedding_model: "all-MiniLM-L6-v2"  # Fast, 384 dim
+  chunk_size: 512
+  chunk_overlap: 50
+
+# Graph Database (Neo4j)
+graph_db:
+  uri: "bolt://localhost:7687"
+  user: "neo4j"
+  password: "password123"  # Change this!
+  database: "neo4j"
+
+# Hybrid Retrieval
+retrieval:
+  top_k_vector: 5
+  top_k_graph: 3
+  rerank: true
+  vector_weight: 0.6
+  graph_weight: 0.4
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  enable_streaming: true
+  cors_enabled: true
+
+# UI Configuration
+ui:
+  title: "🤖 IoT Documentation Assistant"
+  theme: "soft"  # soft, default, or custom
+  port: 7860
+  share: false
+  show_code: true
+
+# Document Processing
+documents:
+  supported_formats: [".txt", ".md", ".pdf", ".docx"]
+  source_directory: "./data/documents"
+  extract_metadata: true
