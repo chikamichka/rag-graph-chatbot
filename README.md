@@ -314,7 +314,7 @@ Built for demonstrating advanced RAG capabilities for technical documentation sy
 
 **Author**: Boukhelkhal Imene  
 **Contact**: [boukhelkhalimene@gmail.com]  
-**GitHub**: [chikamichka]
+**GitHub**: [@chikamichka]
 
 ---
 
