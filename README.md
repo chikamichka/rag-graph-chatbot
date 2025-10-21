@@ -312,9 +312,10 @@ MIT License
 
 Built for demonstrating advanced RAG capabilities for technical documentation systems. Perfect for companies needing intelligent, context-aware documentation assistants.
 
-**Author**: Boukhelkhal Imene  
-**Contact**: [boukhelkhalimene@gmail.com]  
-**GitHub**: [@chikamichka]
+**Author**: imene boukhelkhal 
+**GitHub**: [@chikamichka](https://github.com/chikamichka)  
+**Email**: boukhelkhalimene@gmail.com
+
 
 ---
 
